@@ -1,14 +1,63 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  <script type="text/javascript" src="./headroom.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+
+<meta name="theme-color" content="#ffffff">
   <meta charset="utf-8">
-  <title>Hello world</title>
-  <!--<link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>-->
+  <title>Veille techno | Recommandation dans le streaming</title>
+  <link rel="stylesheet/less" type="text/css" href="style/bandeau_menu.less">
+  <link rel="stylesheet/less" type="text/css" href="style/bounce.less" />
+  <script type="text/javascript" src="./less.js" ></script>
+
 </head>
 <body>
-  ...
-  <!-- Le reste du contenu -->
-  ...
+  <div class="background-div"></div>
+<nav class="bounceInDown">
+  <ul>
+    <li class="roll"><div class="roll" style="font-size:0.5em;margin-top:3em;margin-bottom:3em;">Section 1</div>
+      <ul class="under">
+        <li><a href={section.subsection.subsection_link}>Sous-section 1</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="roll"><div class="roll" style="font-size:0.5em;margin-top:3em;margin-bottom:3em;">Section 2</div>
+      <ul class="under">
+        <li><a href={section.subsection.subsection_link}>Sous-section 1</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<div style="height:15em;"></div>
+<script type="module">
+// grab an element
+var myElement = document.querySelector("nav");
+var options = {
+  "offset": 200,
+  "tolerance": {
+    up: 5,
+    down: 0
+  },
+  "classes": {
+    "initial": "animated",
+    "pinned": "bounceInDown",
+    "unpinned": "bounceOutUp"
+  }
+};
+// pass options as the second argument to the constructor
+// supplied options are merged with defaults
+var headroom = new Headroom(myElement, options);
+
+headroom.init();
+</script>
+Hello world
 </body>
 </html>
