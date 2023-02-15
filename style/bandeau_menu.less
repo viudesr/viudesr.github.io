@@ -13,9 +13,13 @@
   top: 0px;
 }
 .wrapper > * {
+  position:relative;
+  z-index:900;
   grid-column: 2;
 }
 .full-bleed {
+  position:relative;
+  z-index:900;
   width: 100%;
   grid-column: 1 / 4;
 }
@@ -35,7 +39,6 @@
 .background-div{
   background-size: cover;
   background-attachment: fixed;
-  height: 50em;
   top: 0px;
   width: 100%;
   z-index:1;
