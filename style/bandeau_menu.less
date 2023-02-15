@@ -6,8 +6,9 @@
 
 .wrapper {
   display: grid;
-  position:relative;
-  z-index:1000;
+  position:absolute;
+  z-index:900;
+  top: 7em;
   grid-template-columns:
     1fr
     min(65ch, 100%)
@@ -26,6 +27,7 @@
   height: 50em;
   position:sticky;
   width: 100%;
+  z-index:1;
 }
 
 nav{
@@ -33,7 +35,7 @@ nav{
   margin: 0 auto;
   position: sticky;
   top: 0px;
-  z-index:1;
+  z-index:1000;
 }
 
 nav ul{
