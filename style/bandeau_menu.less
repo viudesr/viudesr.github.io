@@ -6,6 +6,8 @@
 
 .wrapper {
   display: grid;
+  position:relative;
+  z-index:1000;
   grid-template-columns:
     1fr
     min(65ch, 100%)
@@ -22,7 +24,7 @@
 .background-div{
   background-size: cover;
   height: 50em;
-  position:absolute;
+  position:sticky;
   width: 100%;
 }
 
