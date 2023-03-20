@@ -42,8 +42,12 @@ p{
   text-align: justify;
 }
 
+ul.text{
+  --icon-space: 1.3em;
+}
 ul.text li{
-  padding-left: 1em;
+  padding-left: var(--icon-space);
+  margin-left: calc( var(--icon-space) * -1 );
 }
 
 .background-div{
