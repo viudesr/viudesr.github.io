@@ -42,13 +42,13 @@ p{
   text-align: justify;
 }
 
-ul.text{
-  list-style-type: symbols(cyclic "-");
+ul.text > li {
+  text-indent: -5px;
 }
-ul.text li{
-  padding-left: 1em;
+ul.text > li:before {
+  content: "-";
+  text-indent: -5px;
 }
-
 .background-div{
   background-size: cover;
   background-attachment: fixed;
