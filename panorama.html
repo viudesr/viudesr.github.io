@@ -140,7 +140,11 @@
       On parle de classification si on sait déjà a priori comment on souhaite que les titres soient regroupés (et donc qu'on possède un ensemble de titres labellisés pour l'entraînement de l'algorithme). Sinon on parle de clustering si on travaille sans labellisation.
       <br/>&emsp;Les caractéristiques utilisées vont permettre de définir des <strong>classifieurs</strong>, qui seront les éléments de comparaison entre les titres. Il est donc primordial de bien choisir les classifieurs utilisés.
       Dans le domaine de la classification sonore, on peut en citer quelques-uns comme les spectrogrammes, le roll-off spectral ou le taux de passage par zéro.
+      On notera qu'un classifieur idéal est facile à mettre en oeuvre et concentre toutes les informations sur le titre de façon synthétique : idéalement un seul nombre qui caractériserait à lui seul le contenu et sa proximité avec d'autres titres.
       <br/><br/>&emsp;Pour ces algorithmes, ce sont les réseaux de neurones convolutionnels (CNN) qui montrent les meilleurs résultats, même en classification/clustering sonore. D'autres modèles sont pourtant envisageables comme SVM, KNN (approche historique), ou encore K-Means pour le clustering.
+      Ces résultats meilleurs obtenus par des réseaux de neurones sont dûs en partie au volume de données souvent gargantuesque à disposition des plateformes qui sont particulièrement bien traités par cette approche.
+
+      <br/><br/>&emsp;Pour de meilleurs résultats, ces deux algorithmes sont associées afin de former ce qu'on appelle l'<strong>hybrid filtering.</strong>
     </p>
     <div style="height:10em;"></div>
     </div>
