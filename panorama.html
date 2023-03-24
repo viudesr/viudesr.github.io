@@ -144,7 +144,15 @@
       <br/><br/>&emsp;Pour ces algorithmes, ce sont les réseaux de neurones convolutionnels (CNN) qui montrent les meilleurs résultats, même en classification/clustering sonore. D'autres modèles sont pourtant envisageables comme SVM, KNN (approche historique), ou encore K-Means pour le clustering.
       Ces résultats meilleurs obtenus par des réseaux de neurones sont dûs en partie au volume de données souvent gargantuesque à disposition des plateformes qui sont particulièrement bien traités par cette approche.
 
-      <br/><br/>&emsp;Pour de meilleurs résultats, ces deux algorithmes sont associées afin de former ce qu'on appelle l'<strong>hybrid filtering.</strong>
+      <br/><br/>&emsp;Pour de meilleurs résultats, ces deux algorithmes sont associées afin de former ce qu'on appelle l'<strong>hybrid filtering, qui est le modèle le plus répandu dans les services de streaming.</strong>
+    </p>
+    <h2>Aller plus loin avec les bases de données linked data</h2>
+    <p>&emsp;Depuis ces dernières années, les bases de données linked data se développent de plus en plus et amènent avec elles du contexte aux données.
+      Ce contexte est bien sûr propice à la classification des données donc sert à l'approche content-based. Google possède notamment sa propre base de données linked data,
+       obtenue notamment par web scraping sur les pages que le moteur de recherche recommande. Ainsi Google peut librement utiliser cette base de données afin d'améliorer son algorithme de recommandation sur YouTube.
+      Un exemple simple serait celui de l'écoute musicale sur YouTube. Grâce à un graphe de connaissances, il est possible de mettre en relation un artiste avec son genre musical, et ainsi de trouver d'autres artistes du même genre musical.
+      On passe donc d'une classification par genre inexacte à une classification exacte se basant sur les données présentes sur Internet. La précision finale de l'algorithme de recommandation n'en devient que meilleure.
+      <br/>&emsp;Dans les années à venir, on peut s'attendre à des progrès dans ce domaine grâce à l'arrivée du Web 3.0.
     </p>
     <div style="height:10em;"></div>
     </div>
@@ -155,6 +163,55 @@
     </div>
     <div class="wrapper background-div" style='background-image: url("./images/ahmed-zayan-sRg9N_0pn1Q-unsplash.jpg");'>
     <div style="height:10em;"></div>
+    <h2>
+      Les biais des algorithmes de recommandation
+    </h2>
+    <p>
+      &emsp;S'ils se révèlent la plupart du temps efficaces, les algorithmes de recommandation ne sont pas sans défauts.
+      <br/>Un des principaux défauts relevés est la création de bulles culturelles. En effet la plupart du temps, les algorithmes sont conçus pour converger.
+      Ce qui implique qu'au bout d'un moment, les goûts de l'utilisateur seront cernés et que celui-ci ne verra alors plus apparaître que le contenu similaire à ce qu'il connaît déjà.
+      On ferme donc la porte à toute découverte et l'utilisateur se retrouve enfermé dans sa bulle.
+      <br/>&emsp;Une solution à ce problème est l'introduction volontaire de contenu hors-bulle, de contenu à succès... dans les suggestions de l'utilisateur. C'est par exemple ce que fait Netflix sur sa page d'accueil,
+      en mettant en avant dans certaines rubriques les contenus les plus appréciés sans forcément tenir compte des préférences de l'utilisateur, ou en laissant certaines rubriques n'étant pas habituellement consultées.
+
+      <br/>&emsp;De manière similaire, on voit également un problème de destruction de l'exception culturelle. On implique ici que certains contenus potentiellement peu populaires se retrouvent exclus des suggestions.
+      Ainsi les petites productions se retrouveraient exclues du catalogue, ou dans un modèle à la Spotify ou chaque artiste est rémunéré selon sa popularité sur la plateforme, ceux-ci pourraient rencontrer des difficultés et une popularité décroissante.
+      En effet sur Spotify, 0.1% des artistes monopolisent plus d'un quart des écoutes.
+      <br/>&emsp;Là encore la solution est d'ajouter dans l'algorithme de recommandation une part de suggestions de contenu peu populaire.
+
+      <br/>&emsp;Un autre effet à la fois souhaité et néfaste est la sur-consommation de contenu et l'addictivité aux terminaux de lecture : les algorithmes de recommandation sont parfois trop efficaces.
+      Le terme de binge-watching, faisant référence à la consommation intense de contenu sur une période courte, est apparu avec Netflix et son algorithme.
+      Outre la perte de temps générée par une consommation incontrôlée, il peut y avoir également une certaine perte d'attention chez les utilisateurs.
+
+      <br/>&emsp;L'absence de transparence de l'algorithme permet également aux plateformes de streaming de faire de la publicité en mettant davantage en avant certains contenus. La complexité de l'algorithme fait qu'il est difficile même pour les autorités compétentes
+      de détecter la publicité faite par ce biais.
+      <br/>&emsp;On trouve enfin le problème de polarisation des opinions, en particulier sur les plateformes communautaires comme YouTube.
+      Guillaume Chaslot, ex-ingénieur chez Google, a fondé l'organisation AlgoTransparency afin de mettre en avant les biais de YouTube.
+      L'objectif est de montrer qu'un nouvel utilisateur se laissant porter par l'algorithme de recommandation se retrouve emmené dans des suggestions aux opinions de plus en plus extrêmes, sans neutralité.
+    </p>
+    <h2>
+      L'exploitation de l'algorithme par la communauté
+    </h2>
+    <p>
+      Les plateformes proposant du contenu créé par la communauté, comme YouTube ou Twitch, sont particulièrement intéressantes car on y observe un apprentissage empirique du fonctionnement de l'algorithme de recommandation.
+      De plus en plus de créateurs de contenu emploient des techniques qui sont aujourd'hui connues afin de rendre leur contenu plus appétant : titres aguicheurs en majuscules, utilisation de certains mots-clés, collaborations avec des personnalités en tendance... 
+      <br/>&emsp;Mais certains vont bien plus loin : c'est le cas de deux informaticiens russes qui sont à l'origine de l'entreprise TheSoul Publishing. Cette entreprise fondée en 2016 se spécialise dans la création de contenu sur YouTube et possède plus de 100 chaînes totalisant plus de 1.5 milliards d'abonnés.
+      La plus grosse chaîne, 5-minute crafts, compte près de 80 millions d'abonnés sur YouTube. Cette entreprise génère environ 2700 vidéos par mois.
+      <br/>Les chaînes diffusent des contenus relativement similaires : des astuces anti-tâches, pour la maison, de bricolage... Le format est toujours le même : des petits clips assemblés sans son, avec parfois des scénarios incompréhensibles.
+      Ces informaticiens effectuent de la rétro-ingénierie de l'algorithme de recommandation de YouTube : une intelligence artificielle génère des scénarios pour les vidéos et apprend en fonction des statistiques réalisées par la vidéo. D'où la cadence si élevée de vidéos.
+      <br/>&emsp;Le bilan est assez catastrophique : outre l'utilité discutable des astuces, c'est surtout une quantité de données immense générée et que Google doit stocker sur des serveurs. Afin d'optimiser les recommandations, certaines vidéos sont même dupliquées avec différentes "langues originales" sélectionnées lors de la mise en ligne.
+      Les vidéos sont réalisées à la chaîne dans des hangars-studios. De son côté, YouTube n'a pas d'intérêt économique à empêcher ce genre de contenu de se propager, ni à demander à TheSoul Publishing et d'autres entreprises similaires d'arrêter leurs activités.
+      Leur activité génère du trafic, ce qui bénéficie financièrement à YouTube.
+    </p>
+    <h2>
+      Conclusion
+    </h2>
+    <p>
+      Lors de cette veille technologique, nous avons vu les principes des algorithmes de recommandation avec leurs deux approches classiques, le collaborative et content-based filtering.
+      <br/>Il a été difficile de trouver des sources permettant d'obtenir des informations sur les nouveautés dans ces algorithmes car ceux-ci sont précieusement gardés par des géants du Web, même si lors d'évènements et conférences on peut en apprendre davantage.
+      La population fait également des travaux de recherche sur ces algorithmes et certains sont capables d'en mettre en avant certains biais au travers d'études voire même de reconstituer partiellement les algorithmes, comme le fait AlgoTransparency.
+      <br/>&emsp;Ce site comporte une section <a class="normal" href="new.html">Nouveautés</a> qui référence certaines actualités relatives aux algorithmes de recommandation et services de streaming.
+    </p>
   </div>
 <script type="module">
 // grab an element
