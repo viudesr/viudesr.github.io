@@ -50,7 +50,6 @@
         patient_list
       </li><li style="white-space:nowrap;">A propos</li></ul></div>
         <ul class="under">
-          <li><a href="auteur.html">Auteur</a></li>
           <li><a href="sources.html">Sources</a></li>
           <li><a href="outils.html">Outils utilisés</a></li>
         </ul>
@@ -124,7 +123,7 @@
       L'idée est qu'en multipliant ces matrices ensemble, on obtient le degré d'appréciabilité du contenu par l'utilisateur.
       Chaque matrice caractérise son contenu : ainsi la matrice de l'utilisateur représente ses goûts en matière de contenu, et la matrice du contenu représente toutes les caractéristiques du contenu en fonction des utilisateurs qui l'apprécient.
       <br/>&emsp;Pour obtenir ces deux matrices on utilise des algorithmes de factorisation matricielle : on décompose le degré d'appréciabilité a posteriori en ces deux matrices.
-      Des algorithmes typiquement utilisés peuvent être ALS (alternative least squares) pour des volumes de données moyens, et SGD (descente de gradient stochastique) pour les volumes élevés.
+      Des algorithmes typiquement utilisés peuvent être ALS [ALS](alternative least squares) pour des volumes de données moyens, et SGD (descente de gradient stochastique) pour les volumes élevés.
       <br/><br/>&emsp; Un problème connu avec ce type d'algorithme est le démarrage à froid (cold start). A savoir que si on est confronté à un nouvel utilisateur, il est nécessaire de construire la matrice de l'utilisateur artificiellement.
       Une solution (simple) est de poser des questions à l'utilisateur lors de son arrivée sur la plateforme afin de construire un semblant de matrice.
       Toutefois cette approche ne permet pas vraiment de résoudre le problème; pour diverses raisons, elle ne donne pas de résultats satisfaisants, peut-être parce que les utilisateurs n'assument pas le type de contenu qu'ils souhaitent consulter,
@@ -140,7 +139,7 @@
       <br/>&emsp;Les caractéristiques utilisées vont permettre de définir des <strong>classifieurs</strong>, qui seront les éléments de comparaison entre les titres. Il est donc primordial de bien choisir les classifieurs utilisés.
       Dans le domaine de la classification sonore, on peut en citer quelques-uns comme les spectrogrammes, le roll-off spectral ou le taux de passage par zéro.
       On notera qu'un classifieur idéal est facile à mettre en oeuvre et concentre toutes les informations sur le titre de façon synthétique : idéalement un seul nombre qui caractériserait à lui seul le contenu et sa proximité avec d'autres titres.
-      <br/><br/>&emsp;Pour ces algorithmes, ce sont les réseaux de neurones convolutionnels (CNN) qui montrent les meilleurs résultats, même en classification/clustering sonore. D'autres modèles sont pourtant envisageables comme SVM, KNN (approche historique), ou encore K-Means pour le clustering.
+      <br/><br/>&emsp;Pour ces algorithmes, ce sont les réseaux de neurones convolutionnels (CNN) qui montrent les meilleurs résultats, même en classification/clustering sonore. D'autres modèles sont pourtant envisageables comme SVM, KNN (approche historique), ou encore K-Means pour le clustering. [ALS+1]
       Ces résultats meilleurs obtenus par des réseaux de neurones sont dûs en partie au volume de données souvent gargantuesque à disposition des plateformes qui sont particulièrement bien traités par cette approche.
 
       <br/><br/>&emsp;Pour de meilleurs résultats, ces deux algorithmes sont associées afin de former ce qu'on appelle l'<strong>hybrid filtering, qui est le modèle le plus répandu dans les services de streaming.</strong>
