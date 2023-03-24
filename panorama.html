@@ -136,8 +136,11 @@
     <p>
       &emsp;L'approche qui complète donc la dernière, et qui se trouve être plus ancienne, est le content-based filtering.
       Celle-ci s'appuie <strong>uniquement sur le contenu</strong>, afin de recommander à l'utilisateur du contenu similaire à celui déjà visionné.
-      <br/>&emsp;Elle implique de définir des caractéristiques pour chaque titre qui en seraient représentatives, afin de pouvoir comparer les titres en eux et d'assimiler des vraisemblances.
-      Les caractéristiques utilisées vont permettre de définir des <strong>classifieurs</strong>,
+      Elle implique de définir des caractéristiques pour chaque titre qui en seraient représentatives, afin de pouvoir comparer les titres entre eux et d'assimiler des vraisemblances. C'est un problème de classification ou de clustering, selon les cas.
+      On parle de classification si on sait déjà a priori comment on souhaite que les titres soient regroupés (et donc qu'on possède un ensemble de titres labellisés pour l'entraînement de l'algorithme). Sinon on parle de clustering si on travaille sans labellisation.
+      <br/>&emsp;Les caractéristiques utilisées vont permettre de définir des <strong>classifieurs</strong>, qui seront les éléments de comparaison entre les titres. Il est donc primordial de bien choisir les classifieurs utilisés.
+      Dans le domaine de la classification sonore, on peut en citer quelques-uns comme les spectrogrammes, le roll-off spectral ou le taux de passage par zéro.
+      <br/><br/>&emsp;Pour ces algorithmes, ce sont les réseaux de neurones convolutionnels (CNN) qui montrent les meilleurs résultats, même en classification/clustering sonore. D'autres modèles sont pourtant envisageables comme SVM, KNN (approche historique), ou encore K-Means pour le clustering.
     </p>
     <div style="height:10em;"></div>
     </div>
