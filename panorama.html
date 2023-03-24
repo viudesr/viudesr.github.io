@@ -123,7 +123,7 @@
       L'idée est qu'en multipliant ces matrices ensemble, on obtient le degré d'appréciabilité du contenu par l'utilisateur.
       Chaque matrice caractérise son contenu : ainsi la matrice de l'utilisateur représente ses goûts en matière de contenu, et la matrice du contenu représente toutes les caractéristiques du contenu en fonction des utilisateurs qui l'apprécient.
       <br/>&emsp;Pour obtenir ces deux matrices on utilise des algorithmes de factorisation matricielle : on décompose le degré d'appréciabilité a posteriori en ces deux matrices.
-      Des algorithmes typiquement utilisés peuvent être ALS [ALS](alternative least squares) pour des volumes de données moyens, et SGD (descente de gradient stochastique) pour les volumes élevés.
+      Des algorithmes typiquement utilisés peuvent être ALS [3](alternative least squares) pour des volumes de données moyens, et SGD (descente de gradient stochastique) pour les volumes élevés.
       <br/><br/>&emsp; Un problème connu avec ce type d'algorithme est le démarrage à froid (cold start). A savoir que si on est confronté à un nouvel utilisateur, il est nécessaire de construire la matrice de l'utilisateur artificiellement.
       Une solution (simple) est de poser des questions à l'utilisateur lors de son arrivée sur la plateforme afin de construire un semblant de matrice.
       Toutefois cette approche ne permet pas vraiment de résoudre le problème; pour diverses raisons, elle ne donne pas de résultats satisfaisants, peut-être parce que les utilisateurs n'assument pas le type de contenu qu'ils souhaitent consulter,
@@ -139,7 +139,7 @@
       <br/>&emsp;Les caractéristiques utilisées vont permettre de définir des <strong>classifieurs</strong>, qui seront les éléments de comparaison entre les titres. Il est donc primordial de bien choisir les classifieurs utilisés.
       Dans le domaine de la classification sonore, on peut en citer quelques-uns comme les spectrogrammes, le roll-off spectral ou le taux de passage par zéro.
       On notera qu'un classifieur idéal est facile à mettre en oeuvre et concentre toutes les informations sur le titre de façon synthétique : idéalement un seul nombre qui caractériserait à lui seul le contenu et sa proximité avec d'autres titres.
-      <br/><br/>&emsp;Pour ces algorithmes, ce sont les réseaux de neurones convolutionnels (CNN) qui montrent les meilleurs résultats, même en classification/clustering sonore. D'autres modèles sont pourtant envisageables comme SVM, KNN (approche historique), ou encore K-Means pour le clustering. [ALS+1]
+      <br/><br/>&emsp;Pour ces algorithmes, ce sont les réseaux de neurones convolutionnels (CNN) qui montrent les meilleurs résultats, même en classification/clustering sonore. D'autres modèles sont pourtant envisageables comme SVM, KNN (approche historique), ou encore K-Means pour le clustering. [4]
       Ces résultats meilleurs obtenus par des réseaux de neurones sont dûs en partie au volume de données souvent gargantuesque à disposition des plateformes qui sont particulièrement bien traités par cette approche.
 
       <br/><br/>&emsp;Pour de meilleurs résultats, ces deux algorithmes sont associées afin de former ce qu'on appelle l'<strong>hybrid filtering, qui est le modèle le plus répandu dans les services de streaming.</strong>
@@ -171,24 +171,24 @@
       &emsp;S'ils se révèlent la plupart du temps efficaces, les algorithmes de recommandation ne sont pas sans défauts.
       <br/>Un des principaux défauts relevés est la création de bulles culturelles. En effet la plupart du temps, les algorithmes sont conçus pour converger.
       Ce qui implique qu'au bout d'un moment, les goûts de l'utilisateur seront cernés et que celui-ci ne verra alors plus apparaître que le contenu similaire à ce qu'il connaît déjà.
-      On ferme donc la porte à toute découverte et l'utilisateur se retrouve enfermé dans sa bulle.
+      On ferme donc la porte à toute découverte et l'utilisateur se retrouve enfermé dans sa bulle.[5]
       <br/>&emsp;Une solution à ce problème est l'introduction volontaire de contenu hors-bulle, de contenu à succès... dans les suggestions de l'utilisateur. C'est par exemple ce que fait Netflix sur sa page d'accueil,
       en mettant en avant dans certaines rubriques les contenus les plus appréciés sans forcément tenir compte des préférences de l'utilisateur, ou en laissant certaines rubriques n'étant pas habituellement consultées.
 
-      <br/>&emsp;De manière similaire, on voit également un problème de destruction de l'exception culturelle. On implique ici que certains contenus potentiellement peu populaires se retrouvent exclus des suggestions.
+      <br/>&emsp;De manière similaire, on voit également un problème de destruction de l'exception culturelle. [5] On implique ici que certains contenus potentiellement peu populaires se retrouvent exclus des suggestions.
       Ainsi les petites productions se retrouveraient exclues du catalogue, ou dans un modèle à la Spotify ou chaque artiste est rémunéré selon sa popularité sur la plateforme, ceux-ci pourraient rencontrer des difficultés et une popularité décroissante.
-      En effet sur Spotify, 0.1% des artistes monopolisent plus d'un quart des écoutes.
+      En effet sur Spotify, 0.1% des artistes monopolisent plus d'un quart des écoutes [6].
       <br/>&emsp;Là encore la solution est d'ajouter dans l'algorithme de recommandation une part de suggestions de contenu peu populaire.
 
       <br/>&emsp;Un autre effet à la fois souhaité et néfaste est la sur-consommation de contenu et l'addictivité aux terminaux de lecture : les algorithmes de recommandation sont parfois trop efficaces.
       Le terme de binge-watching, faisant référence à la consommation intense de contenu sur une période courte, est apparu avec Netflix et son algorithme.
       Outre la perte de temps générée par une consommation incontrôlée, il peut y avoir également une certaine perte d'attention chez les utilisateurs.
 
-      <br/>&emsp;L'absence de transparence de l'algorithme permet également aux plateformes de streaming de faire de la publicité en mettant davantage en avant certains contenus [N]. La complexité de l'algorithme fait qu'il est difficile même pour les autorités compétentes
+      <br/>&emsp;L'absence de transparence de l'algorithme permet également aux plateformes de streaming de faire de la publicité en mettant davantage en avant certains contenus [8]. La complexité de l'algorithme fait qu'il est difficile même pour les autorités compétentes
       de détecter la publicité faite par ce biais.
       <br/>&emsp;On trouve enfin le problème de polarisation des opinions, en particulier sur les plateformes communautaires comme YouTube.
       Guillaume Chaslot, ex-ingénieur chez Google, a fondé l'organisation AlgoTransparency afin de mettre en avant les biais de YouTube.
-      L'objectif est de montrer qu'un nouvel utilisateur se laissant porter par l'algorithme de recommandation se retrouve emmené dans des suggestions aux opinions de plus en plus extrêmes, sans neutralité.
+      L'objectif est de montrer qu'un nouvel utilisateur se laissant porter par l'algorithme de recommandation se retrouve emmené dans des suggestions aux opinions de plus en plus extrêmes, sans neutralité. [7]
     </p>
     <h2>
       L'exploitation de l'algorithme par la communauté
