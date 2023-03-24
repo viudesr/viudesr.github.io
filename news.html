@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <script type="text/javascript" src="scripts/headroom.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+
+<meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <title>Accueil - Veille technonologique | Algorithmes de recommandation dans le streaming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,1,0" />
+  <link rel="stylesheet/less" type="text/css" href="style/bandeau_menu.less">
+  <link rel="stylesheet/less" type="text/css" href="style/bounce.less" />
+  <script type="text/javascript" src="scripts/less.js" ></script>
+  <link rel="stylesheet" type="text/css" href="style/home.css" />
+
+</head>
+<body>
+  <nav>
+    <ul>
+      <!-- SECTION -->
+      <li class="roll"><div class="roll" style="font-size:1.5em;margin-top:0.5em;margin-bottom:0.5em;"><ul><li class="material-symbols-outlined">
+        home
+      </li><li>Démarrer</li></ul></div>
+        <ul class="under">
+          <!-- SOUS-SECTION -->
+          <li><a href="index.html#accueil" onclick='location.href="index.html#accueil";'>Accueil</a></li>
+          <li><a href="index.html#Introduction" onclick='location.href="index.html#Introduction";'>Introduction</a></li>
+        </ul>
+      </li>
+      <li class="roll"><div class="roll" style="font-size:1.5em;margin-top:0.5em;margin-bottom:0.5em;"><ul><li class="material-symbols-outlined">
+        apps
+      </li><li>Panorama</li></ul></div><!-- width_full -->
+        <ul class="under">
+          <li><a href="#part1">Motivations et intérêts</a></li>
+          <li><a href="#part2">Fonctionnement</a></li>
+          <li><a href="#part3">Pratiques dérivées</a></li>
+        </ul>
+      </li>
+      <li class="roll"><div class="roll" style="font-size:1.5em;margin-top:0.5em;margin-bottom:0.5em;"><ul><li class="material-symbols-outlined">
+        browse_activity
+      </li><li>Nouveautés</li></ul></div>
+        <ul class="under">
+          <li><a href="flux_rss.html">Flux RSS</a></li>
+          <li><a href="google_alerts.html">Alertes Google</a></li>
+        </ul>
+      </li>
+      <li class="roll"><div class="roll" style="font-size:1.5em;margin-top:0.5em;margin-bottom:0.5em;"><ul><li class="material-symbols-outlined">
+        patient_list
+      </li><li style="white-space:nowrap;">A propos</li></ul></div>
+        <ul class="under">
+          <li><a href="auteur.html">Auteur</a></li>
+          <li><a href="sources.html">Sources</a></li>
+          <li><a href="outils.html">Outils utilisés</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="wrapper background-div" style='background-image: url("./images/daniel-robert-IrfifjcpFYE-unsplash.jpg");'>
+    <div class="full-bleed headline" id="part1"><br/><br/>
+        <h1>Nouveautés</h1>
+        <a class="transparent-black-box" style="background: none;width:5em;" href="https://www.flaticon.com/fr/icones-gratuites/nouvelles" title="nouvelles icônes">Nouvelles icônes créées par smalllikeart - Flaticon</a>
+        <img src="images/journal.png" style="height:15em;margin-left:15em;"/>
+    </div>
+    <div style="height:10em;"></div>
+    <p>
+        <ul class="text">
+            <li>
+                Le 21 mars 2023, Twitter a ouvert le code de son algorithme de recommandation de tweets, sur une volonté du CEO Elon Musk.
+            </li>
+            <li>
+                Le 20 mars 2023, YouTube Music rattrape petit à petit la concurrence en ajoutant une fonctionnalité qui manquait jusqu'à maintenant sur ses titres : le crédit systématique des auteurs-compositeurs.
+            </li>
+            <li>
+                Le 18 mars 2023, TikTok a annoncé une fonctionnalité permettant de réinitialiser les suggestions de contenus.
+            </li>
+            <li>
+                Le 15 mars 2023, Spotify a annoncé repousser l'arrivée de son offre Hi-Fi. Le même jour a été dévoilée une étude sur l'utilisation de Spotify dans la journée et la propension à écouter des publicités.
+                60% des titres écoutés ont un rapport avec celui écouté juste avant. 73% des sondés ont annoncé être disposés à écouter des annonces pendant leur utilisation de Spotify.
+            </li>
+        </ul>
+    </p>
+  </div>
+<script type="module">
+// grab an element
+var myElement = document.querySelector("nav");
+var options = {
+  "offset": 40,
+  "tolerance": {
+    up: 0,
+    down: 0
+  },
+  "classes": {
+    "initial": "animated",
+    "pinned": "bounceInDown",
+    "unpinned": "bounceOutUp"
+  }
+};
+// pass options as the second argument to the constructor
+// supplied options are merged with defaults
+var headroom = new Headroom(myElement, options);
+
+headroom.init();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script> 
+</body>
+</html>
