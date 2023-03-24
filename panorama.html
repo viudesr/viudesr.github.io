@@ -71,15 +71,15 @@
       Puisque bien souvent leur efficacité est redoutable, parfois même essentielle à l'activité des plateformes de streaming.
       Google a annoncé au CES 2018 que plus de 70% du contenu visionné sur YouTube a été accédé au travers de l'algorithme de recommandation (par opposition à la recherche manuelle).
       De même, pour Netflix, l'algorithme de recommandation concerne la majorité des visionnages.
-      <br/>Il est toutefois intéressant de noter que l'efficacité d'un algorithme de recommandation dépend fortement du type de contenu concerné :
+      <br/>&emsp;Il est toutefois intéressant de noter que l'efficacité d'un algorithme de recommandation dépend fortement du type de contenu concerné :
       on observe au contraire que chez Spotify, le contenu recommandé représente une minorité des écoutes, la plupart des titres écoutés étant dans les habitudes de l'utilisateur, ou recherchés manuellement.
-      <br/>Ces différences s'expliquent par le fait qu'un contenu vidéo spécifique soit rarement re-visionné, mais qu'un contenu audio soit plus susceptible d'être ré-écouté. Il y a davantage de fidélité au contenu audio.
+      <br/>&emsp;Ces différences s'expliquent par le fait qu'un contenu vidéo spécifique soit rarement re-visionné, mais qu'un contenu audio soit plus susceptible d'être ré-écouté. Il y a davantage de fidélité au contenu audio.
     </p>
     <h2>Intérêts pour l'utilisateur</h2>
     <p>
       &emsp;Les principaux arguments justifiant l'utilisation d'algorithmes de recommandation auprès du public sont la personnalisation de l'interface, le gain de temps lors du choix du contenu à consulter,
        et le fait d'aider l'utilisateur à naviguer au sein d'un contenu vaste.
-      <br/><br/>On trouve alors les recommandations quasiment partout dans le parcours de l'utilisateur sur la plateforme : dès la page d'accueil, à la fin de la consultation d'un titre mais même parfois pendant la consultation.
+      <br/><br/>&emsp;On trouve alors les recommandations quasiment partout dans le parcours de l'utilisateur sur la plateforme : dès la page d'accueil, à la fin de la consultation d'un titre mais même parfois pendant la consultation.
       Quasiment toutes les plateformes ont adopté la fonctionnalité de lecture automatique à la fin d'un titre. L'utilisateur n'a même plus besoin de saisir son téléphone ou sa télécommande pour continuer sa lecture.
     </p>
     <h2>Intérêts pour l'entreprise</h2>
@@ -115,7 +115,7 @@
       Celui-ci repose sur la création de deux matrices : une pour l'utilisateur, et une pour le contenu. 
       L'idée est qu'en multipliant ces matrices ensemble, on obtient le degré d'appréciabilité du contenu par l'utilisateur.
       Chaque matrice caractérise son contenu : ainsi la matrice de l'utilisateur représente ses goûts en matière de contenu, et la matrice du contenu représente toutes les caractéristiques du contenu en fonction des utilisateurs qui l'apprécient.
-      <br/>Pour obtenir ces deux matrices on utilise des algorithmes de factorisation matricielle : on décompose le degré d'appréciabilité a posteriori en ces deux matrices.
+      <br/>&emsp;Pour obtenir ces deux matrices on utilise des algorithmes de factorisation matricielle : on décompose le degré d'appréciabilité a posteriori en ces deux matrices.
       Des algorithmes typiquement utilisés peuvent être ALS (alternative least squares) pour des volumes de données moyens, et SGD (descente de gradient stochastique) pour les volumes élevés.
       <br/><br/>&emsp; Un problème connu avec ce type d'algorithme est le démarrage à froid (cold start). A savoir que si on est confronté à un nouvel utilisateur, il est nécessaire de construire la matrice de l'utilisateur artificiellement.
       Une solution (simple) est de poser des questions à l'utilisateur lors de son arrivée sur la plateforme afin de construire un semblant de matrice.
