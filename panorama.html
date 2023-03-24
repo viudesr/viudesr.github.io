@@ -67,7 +67,7 @@
     </div>
     <h2>Présence et efficacité</h2>
     <p>
-      Les algorithmes de recommandation sont aujourd'hui omniprésents dans les différents médias. Et pourquoi?
+      &emsp;Les algorithmes de recommandation sont aujourd'hui omniprésents dans les différents médias. Et pourquoi?
       Puisque bien souvent leur efficacité est redoutable, parfois même essentielle à l'activité des plateformes de streaming.
       Google a annoncé au CES 2018 que plus de 70% du contenu visionné sur YouTube a été accédé au travers de l'algorithme de recommandation (par opposition à la recherche manuelle).
       De même, pour Netflix, l'algorithme de recommandation concerne la majorité des visionnages.
@@ -77,21 +77,21 @@
     </p>
     <h2>Intérêts pour l'utilisateur</h2>
     <p>
-      Les principaux arguments justifiant l'utilisation d'algorithmes de recommandation auprès du public sont la personnalisation de l'interface, le gain de temps lors du choix du contenu à consulter,
+      &emsp;Les principaux arguments justifiant l'utilisation d'algorithmes de recommandation auprès du public sont la personnalisation de l'interface, le gain de temps lors du choix du contenu à consulter,
        et le fait d'aider l'utilisateur à naviguer au sein d'un contenu vaste.
       <br/><br/>On trouve alors les recommandations quasiment partout dans le parcours de l'utilisateur sur la plateforme : dès la page d'accueil, à la fin de la consultation d'un titre mais même parfois pendant la consultation.
       Quasiment toutes les plateformes ont adopté la fonctionnalité de lecture automatique à la fin d'un titre. L'utilisateur n'a même plus besoin de saisir son téléphone ou sa télécommande pour continuer sa lecture.
     </p>
     <h2>Intérêts pour l'entreprise</h2>
     <p>
-      L'objectif de tels algorithmes est d'assurer la pérennité de la plateforme. En effet ceux-ci aident à fidéliser les utilisateurs, ils sont donc essentiels pour que ceux-ci reviennent régulièrement consulter du contenu.
+      &emsp;L'objectif de tels algorithmes est d'assurer la pérennité de la plateforme. En effet ceux-ci aident à fidéliser les utilisateurs, ils sont donc essentiels pour que ceux-ci reviennent régulièrement consulter du contenu.
       C'est ce qui a permis à Netflix de s'imposer comme acteur majeur du streaming vidéo face à la concurrence. Les algorithmes de recommandation permettent également d'augmenter la quantité de contenu visionné,
       ce qui est intéressant économiquement lorsque l'entreprise se rémunère par le biais de publicités ou d'achat/location de titres, comme cela a été lancé en octobre 2022 sur Netflix avec son offre payante à tarif réduit,
       et est le cas sur YouTube et Spotify avec les versions gratuites de ces plateformes. <a class="normal" href="https://www.linkedin.com/pulse/svod-d%C3%A9j%C3%A0-pr%C3%A8s-de-14-millions-clients-pour-netflix-avec-publicit%C3%A9-/">Voir les statistiques d'utilisation de l'abonnement avec publicité chez Netflix.</a>
-      <br/><br/>Une fois les algorithmes en main et entraînés sur des utilisateurs en production, ceux-ci peuvent se révéler particulièrement intéressants dans la perspective de création de contenu.
+      <br/><br/>&emsp;Une fois les algorithmes en main et entraînés sur des utilisateurs en production, ceux-ci peuvent se révéler particulièrement intéressants dans la perspective de création de contenu.
       Il est possible pour la plateforme de simuler un nouvel élément dans son catalogue et d'en estimer la popularité, ce qui peut servir à Netflix, Amazon Prime ou HBO pour tester leurs scénarios avant
       même d'avoir commencé la production.
-      <br/>Dans le même registre, il est possible d'utiliser les informations recueillies sur les utilisateurs grâce à ces algorithmes afin de segmenter le marché. Cela permet d'une part d'avoir des statistiques précises
+      <br/>&emsp;Dans le même registre, il est possible d'utiliser les informations recueillies sur les utilisateurs grâce à ces algorithmes afin de segmenter le marché. Cela permet d'une part d'avoir des statistiques précises
       des typologies d'utilisateurs, mais d'autre part également de tester la recommandation d'un titre auprès d'un groupe précis d'utilisateurs. Les études de marché peuvent ainsi être complétées par l'algorithme.
     </p>
      <div class="full-bleed headline" id="part2"><br/><br/>
@@ -99,17 +99,34 @@
     </div>
     <h2>Données collectées</h2>
     <p>
-      On trouve bien sûr pour commencer les données renseignées par l'utilisateur lors de son inscription sur la plateforme : nom, pays, âge, sexe, adresse email, parfois adresse et numéro de téléphone... 
+      &emsp;On trouve bien sûr pour commencer les données renseignées par l'utilisateur lors de son inscription sur la plateforme : nom, pays, âge, sexe, adresse email, parfois adresse et numéro de téléphone... 
       <br/>Il y a également certaines données obtenues de façon implicite lors de la connexion de l'utilisateur à la plateforme : l'emplacement depuis lequel il se connecte, le terminal utilisé, la date,
       mais aussi pour certains services comme Spotify dans le cadre de l'utilisation de Spotify Connect (la fonctionnalité de reprise de lecture sur un autre terminal), les périphériques connectés au terminal.
       <br/>
-      Enfin, le contexte actuel de Big Data permet la remontée d'une quantité très importante de données précises relatives à la navigation. On peut récupérer le temps passé à visionner un titre,
+      &emsp;Enfin, le contexte actuel de Big Data permet la remontée d'une quantité très importante de données précises relatives à la navigation. On peut récupérer le temps passé à visionner un titre,
       la vitesse à laquelle on fait défiler les titres, le nombre de titres ayant apparu avant la sélection du contenu visionné... 
       Ces informations difficiles à interpréter pour un humain sont typiquement là où l'algorithme de recommandation apporte une plus-value importante en étant capable d'interpréter ces données.
       Car une mesure de l'appréciabilité au travers de notations est bien plus simple mais moins finement interprétable : l'utilisateur a-t-il été happé par le contenu? Lui a-t-il fallu revenir sur ce contenu à plusieurs reprises avant de lancer ou de finir sa lecture? etc.
     </p>
-      <h2>Le collaborative filtering</h2>
+    <h2>Le collaborative filtering</h2>
+    <p>
+      &emsp;En ce qui concerne l'algorithme en lui-même, une approche qui s'est développée dans le contexte de Big Data est appelée collaborative filtering.
+      Dans cette approche on prend ainsi en compte l'ensemble des données précédemment citées pour faire fonctionner l'algorithme en vue d'estimer le feedback de l'utilisateur.
+      Celui-ci repose sur la création de deux matrices : une pour l'utilisateur, et une pour le contenu. 
+      L'idée est qu'en multipliant ces matrices ensemble, on obtient le degré d'appréciabilité du contenu par l'utilisateur.
+      Chaque matrice caractérise son contenu : ainsi la matrice de l'utilisateur représente ses goûts en matière de contenu, et la matrice du contenu représente toutes les caractéristiques du contenu en fonction des utilisateurs qui l'apprécient.
+      <br/>Pour obtenir ces deux matrices on utilise des algorithmes de factorisation matricielle : on décompose le degré d'appréciabilité a posteriori en ces deux matrices.
+      Des algorithmes typiquement utilisés peuvent être ALS (alternative least squares) pour des volumes de données moyens, et SGD (descente de gradient stochastique) pour les volumes élevés.
+      <br/><br/>&emsp; Un problème connu avec ce type d'algorithme est le démarrage à froid (cold start). A savoir que si on est confronté à un nouvel utilisateur, il est nécessaire de construire la matrice de l'utilisateur artificiellement.
+      Une solution (simple) est de poser des questions à l'utilisateur lors de son arrivée sur la plateforme afin de construire un semblant de matrice.
+      Toutefois cette approche ne permet pas vraiment de résoudre le problème; pour diverses raisons, elle ne donne pas de résultats satisfaisants, peut-être parce que les utilisateurs n'assument pas le type de contenu qu'ils souhaitent consulter,
+      parce qu'ils ne savent pas réellement ce que leurs indications impliquent en terme de recommandations...
+      <br/>Un autre solution éventuelle serait de mettre en avant le contenu uniquement par rapport à sa popularité. Mais encore une fois cela n'est pas optimal; c'est pour cela qu'on combine souvent le collaborative filtering avec une autre approche...
+    </p>
     <h2>Le content-based filtering</h2>
+    <p>
+      
+    </p>
     <div class="full-bleed headline" id="part3"><br/><br/>
         <h1>Pratiques dérivées</h1>
     </div>
